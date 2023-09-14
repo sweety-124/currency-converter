@@ -13,11 +13,12 @@ async function getCurrencies() {
 
 export default async function HomePage() {
 
-  const currencies = await getCurrencies();
+ const currencies = await getCurrencies();
 
   return (
     <div className="bg-white">
       <div className="relative isolate px-6  lg:px-8">
+        
       <NavBar  />
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -40,7 +41,7 @@ export default async function HomePage() {
               Your All-in-One Solution for Quick, Accurate, and Hassle-Free
               Currency Conversions.
             </p>
-            <ConvertWrapper currencies={currencies}/>
+            <ConvertWrapper currencies={currencies}/> 
           </div>
         </div>
        

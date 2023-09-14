@@ -75,6 +75,7 @@ const ConvertForm = ({ currencies = {} }: Props) => {
           <div className="flex justify-between items-center   flex-row  mt-0 md:gap-x-4">
             <div>
               <ChooseCurrency
+                type={'from'}
                 currency={selectedFromCurrency}
                 setSelectedCurrency={setSelectedFromCurrency}
                 options={optionsList}
@@ -85,11 +86,13 @@ const ConvertForm = ({ currencies = {} }: Props) => {
         <div className="flex flex-row gap-x-4  items-center justify-center mt-4">
           <h3 className="ml-0 md:ml-5 ">Convert To</h3>
           <ChooseCurrency
+            type={'to'}
             currency={selectedToCurrency}
             setSelectedCurrency={setSelectedToCurrency}
             options={optionsList}
           />
           <button
+          id="convertNow"
             type="button"
             onClick={handleConversion}
             className="rounded-md bg-indigo-600 px-3.5 py-2.5 h-12 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

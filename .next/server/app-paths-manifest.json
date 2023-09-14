@@ -1,0 +1,4 @@
+{
+  "/page": "app/page.js",
+  "/(conversion)/history/page": "app/(conversion)/history/page.js"
+}
