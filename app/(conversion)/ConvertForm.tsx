@@ -35,9 +35,8 @@ const ConvertForm = ({ currencies = {} }: Props) => {
   const dispatch = useAppDispatch();
 
   const handleConversion = async () => {
-    // console.log("START Conversion");
+
     const base = await getLatestValue(selectedFromCurrency);
-    console.log('basee',base)
     if (amount && Number(amount) > 0) {
       let res = Number(amount) * base[selectedToCurrency];
       setResult(res);
