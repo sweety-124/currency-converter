@@ -1,0 +1,1 @@
+export const CURRENCY_KEY='fca_live_UjiQbrMaaKm9IjroOuk8z2JivoIcMPVb5Wd9sJIp'

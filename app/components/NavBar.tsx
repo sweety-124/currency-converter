@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import { relative } from "node:path";
 type Props = {};
 
 const navigation = [

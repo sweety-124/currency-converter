@@ -1,10 +1,11 @@
-import ConvertForm from "./(conversion)/ConvertForm";
+
 import ConvertWrapper from "./(conversion)/ConvertWrapper";
 import NavBar from "./components/NavBar";
+import { CURRENCY_KEY } from "./config/constants";
 
 async function getCurrencies() {
   const res = await fetch(
-    "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_UjiQbrMaaKm9IjroOuk8z2JivoIcMPVb5Wd9sJIp",
+    `https://api.freecurrencyapi.com/v1/latest?apikey=${CURRENCY_KEY}`,
     { cache: "no-store" }
   );
   const data = await res.json();

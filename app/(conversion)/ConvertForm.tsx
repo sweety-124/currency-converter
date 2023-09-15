@@ -1,11 +1,11 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
 import ChooseCurrency from "../components/ChooseCurrency";
-import ReduxProvider from "../store/ReduxProvider";
 import ResultCard from "../components/ResultCard";
 import { useAppDispatch } from "../store";
 import { addToHistory } from "../store/slices/HistorySlice";
 import { toast } from "react-toastify";
+import { CURRENCY_KEY } from "../config/constants";
 
 type Props = {
   currencies?: any;
@@ -13,7 +13,7 @@ type Props = {
 
 async function getLatestValue(base: string) {
   const response = await fetch(
-    `https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_UjiQbrMaaKm9IjroOuk8z2JivoIcMPVb5Wd9sJIp&&base_currency=${base}`
+    `https://api.freecurrencyapi.com/v1/latest?apikey=${CURRENCY_KEY}&&base_currency=${base}`
   );
   const data = await response.json();
   return data.data;

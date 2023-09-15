@@ -1,5 +1,5 @@
 {
-  "name": "currency_conversion_app",
+  "name": "currency_converter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
